@@ -125,7 +125,8 @@ table {
   display: none; }
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
 
 *,
 *::before,
