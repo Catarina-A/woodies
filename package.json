@@ -16,6 +16,9 @@
     "sass": "^1.32.4"
   },
   "dependencies": {
-    "reset-css": "^5.0.1"
+    "jquery": "^3.5.1",
+    "rateyo": "^3.0.0-alpha.2",
+    "reset-css": "^5.0.1",
+    "slick-carousel": "^1.8.1"
   }
 }
