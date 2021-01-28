@@ -11,17 +11,20 @@ $(function(){
     nextArrow: `<button type="button" class="slick-btn slick-next"><img src="${nextImage}" alt=""></button>`,
     dots: true,
     speed: 500
-    // responsive: [
-    //   {
-    //     breakpoint: 300,
-    //     settings: {
-    //       arrows: false
-    //     }
-    //   },
-    // ]
   })
 
   $('.menu__btn').on('click', function(){
     $('.header__navigation').toggleClass('header__navigation--active')
+  });
+
+  $(".header__menu-item").on("click","a", function (event) {
+    //отменяем стандартную обработку нажатия по ссылке
+    event.preventDefault();
+    //забираем идентификатор блока с атрибута href
+    var id  = $(this).attr('href'),
+    //узнаем высоту от начала страницы до блока на который ссылается якорь
+      top = $(id).offset().top;
+    //анимируем переход на расстояние - top за 1500 мс
+    $('body,html').animate({scrollTop: top}, 1500);
   });
 });
